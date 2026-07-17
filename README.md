@@ -1,60 +1,75 @@
-# AI-Business-Analyst
-Enterprise AI Business Analyst capable of analyzing spreadsheets, generating executive insights and creating automatic visualizations using LLMs.
+# AI Business Analyst
 
-Features:
-✔ Spreadsheet Analysis (CSV / Excel)
-✔ Automatic Business Insights
-✔ Executive Reports
-✔ Automatic Chart Generation
-✔ Interactive Streamlit Dashboard
-✔ Business Intelligence Agent
-✔ LangChain + Groq Integration
-✔ Modular Architecture
-✔ Local Python Interface
+Enterprise AI Business Analyst capable of analyzing spreadsheets, generating executive insights and creating automatic visualizations using Large Language Models (LLMs).
 
-Tech Stack:
-Python
-Langchain
-Groq
-Pandas
-Matplotlib
-Streamlit
-OpenPyXL
-NumPy
+---
 
-Architecture:
-User Question
-      │
-      ▼
-Planner (LLM)
-      │
-      ▼
-Execution Plan (JSON)
-      │
-      ▼
-Data Executor (Pandas)
-      │
-      ▼
-Business Analyst (LLM)
-      │
-      ▼
-Visualization Planner
-      │
-      ▼
-Automatic Chart
+## Features
 
-Project Structure:
+- Spreadsheet Analysis (CSV / Excel)
+- Automatic Business Insights
+- Executive Business Reports
+- Automatic Chart Generation
+- Interactive Streamlit Dashboard
+- Business Intelligence Agent
+- LangChain + Groq Integration
+- Modular Architecture
+- Local Python Interface
+
+---
+
+## Tech Stack
+
+- Python
+- LangChain
+- Groq
+- Pandas
+- NumPy
+- Matplotlib
+- Streamlit
+- OpenPyXL
+
+---
+
+## Architecture
+
+```
+                User Question
+                      │
+                      ▼
+              Planner (LLM)
+                      │
+                      ▼
+          Execution Plan (JSON)
+                      │
+                      ▼
+          Data Executor (Pandas)
+                      │
+                      ▼
+        Business Analyst (LLM)
+                      │
+                      ▼
+       Visualization Planner
+                      │
+                      ▼
+            Automatic Chart
+```
+
+---
+
+## Project Structure
+
+```
 AI-Business-Analyst/
 
-│
 ├── app.py
 ├── main.py
 ├── planner.py
 ├── executor.py
 ├── spreadsheet_agent.py
+├── business_analyst.py
 ├── visualization.py
 ├── visualization_planner.py
-├── business_analyst.py
 ├── dataset_manager.py
 ├── rag.py
 ├── config.py
@@ -63,41 +78,61 @@ AI-Business-Analyst/
 ├── documents/
 ├── charts/
 └── README.md
+```
 
-Example Questions:
-Which product generated the highest revenue?
+---
 
-Show the monthly revenue trend.
+## Example Questions
 
-Compare revenue by region.
+- Which product generated the highest revenue?
+- Show the monthly revenue trend.
+- Compare revenue by region.
+- Which salesperson sold the most?
+- Show average profit by category.
+- Which region has the highest profit?
+- Create a revenue distribution chart.
+- Summarize the business performance.
 
-Which salesperson sold the most?
+---
 
-Show average profit by category.
+## Running Locally
 
-Which region has the highest profit?
+Clone the repository:
 
-Create a revenue distribution chart.
+```bash
+git clone https://github.com/your-username/AI-Business-Analyst.git
+```
 
-Summarize the business performance.
+Go to the project folder:
 
-Running Locally:
-git clone ...
-
+```bash
 cd AI-Business-Analyst
+```
 
+Install the dependencies:
+
+```bash
 pip install -r requirements.txt
+```
 
+Run the Streamlit application:
+
+```bash
 streamlit run app.py
+```
 
+Or execute the local interface:
 
-Author
-Vitor Bachrany
+```bash
+python main.py
+```
+
+---
+
+## Author
+
+**Vitor Bachrany**
 
 Information Engineering Student
 
-Artificial Intelligence
-
-Business Intelligence
-
-Data Engineering
+Artificial Intelligence • Business Intelligence • Data Engineering
