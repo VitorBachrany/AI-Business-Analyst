@@ -3,7 +3,19 @@
 Enterprise AI Business Analyst capable of analyzing spreadsheets, generating executive insights and creating automatic visualizations using Large Language Models (LLMs).
 
 ---
+## Examples
 
+
+
+https://github.com/user-attachments/assets/aef019d1-5a6e-4ca1-a97d-9d0c74a4c41d
+
+
+
+
+
+
+
+---
 ## Features
 
 - Spreadsheet Analysis (CSV / Excel)
