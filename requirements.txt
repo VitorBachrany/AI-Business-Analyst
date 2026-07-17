@@ -1,0 +1,17 @@
+streamlit
+langchain
+langchain-groq
+langgraph
+langchain-community
+duckduckgo-search
+
+pandas
+numpy
+matplotlib
+openpyxl
+
+python-dotenv
+
+chromadb
+sentence-transformers
+langchain-chroma
