@@ -8,6 +8,12 @@ Enterprise AI Business Analyst capable of analyzing spreadsheets, generating exe
 
 
 https://github.com/user-attachments/assets/aef019d1-5a6e-4ca1-a97d-9d0c74a4c41d
+Prompt used: Based on the business results, identify the areas that should receive the highest investment next year.
+
+<img width="1904" height="923" alt="image" src="https://github.com/user-attachments/assets/9edd1135-1f59-4864-abaf-67f811e78bb5" />
+<img width="1916" height="919" alt="image" src="https://github.com/user-attachments/assets/48e0cecd-24cc-4c26-b237-05e9f552efe4" />
+<img width="1096" height="872" alt="image" src="https://github.com/user-attachments/assets/0d5fd75e-0de9-4f56-bb77-3e0c01369d97" />
+<img width="1520" height="802" alt="image" src="https://github.com/user-attachments/assets/f4b3b28a-36bd-441b-ad74-c323d3936d2f" />
 
 
 
@@ -102,8 +108,7 @@ AI-Business-Analyst/
 - Which salesperson sold the most?
 - Show average profit by category.
 - Which region has the highest profit?
-- Create a revenue distribution chart.
-- Summarize the business performance.
+-Based on the business results, identify the areas that should receive the highest investment next year.
 
 ---
 
