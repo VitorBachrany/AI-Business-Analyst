@@ -8,6 +8,8 @@ Enterprise AI Business Analyst capable of analyzing spreadsheets, generating exe
 
 
 https://github.com/user-attachments/assets/aef019d1-5a6e-4ca1-a97d-9d0c74a4c41d
+
+---
 Prompt used: Based on the business results, identify the areas that should receive the highest investment next year.
 
 <img width="1904" height="923" alt="image" src="https://github.com/user-attachments/assets/9edd1135-1f59-4864-abaf-67f811e78bb5" />
