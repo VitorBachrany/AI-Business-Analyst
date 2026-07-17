@@ -2,19 +2,22 @@
 
 Enterprise AI Business Analyst capable of analyzing spreadsheets, generating executive insights and creating automatic visualizations using Large Language Models (LLMs).
 
----
-## Examples
-
 
 
 https://github.com/user-attachments/assets/aef019d1-5a6e-4ca1-a97d-9d0c74a4c41d
 
 ---
+## Screenshots
 Prompt used: Based on the business results, identify the areas that should receive the highest investment next year.
 
+
+##Dashboard
 <img width="1904" height="923" alt="image" src="https://github.com/user-attachments/assets/9edd1135-1f59-4864-abaf-67f811e78bb5" />
+### Business Analysis
 <img width="1916" height="919" alt="image" src="https://github.com/user-attachments/assets/48e0cecd-24cc-4c26-b237-05e9f552efe4" />
+### Visualization
 <img width="1096" height="872" alt="image" src="https://github.com/user-attachments/assets/0d5fd75e-0de9-4f56-bb77-3e0c01369d97" />
+### Dataset Overview
 <img width="1520" height="802" alt="image" src="https://github.com/user-attachments/assets/f4b3b28a-36bd-441b-ad74-c323d3936d2f" />
 
 
