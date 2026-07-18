@@ -20,6 +20,7 @@ Prompt used: Based on the business results, identify the areas that should recei
 
 ## Vizualization
 <img width="1520" height="802" alt="image" src="https://github.com/user-attachments/assets/f4b3b28a-36bd-441b-ad74-c323d3936d2f" />
+<img width="800" height="800" alt="pie_chart_20260717_213035" src="https://github.com/user-attachments/assets/0fda891a-0118-45a0-9ea8-32171d1782d0" />
 
 
 
