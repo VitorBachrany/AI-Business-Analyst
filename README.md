@@ -57,27 +57,8 @@ Prompt used: Based on the business results, identify the areas that should recei
 
 ## Architecture
 
-```
-                User Question
-                      │
-                      ▼
-              Planner (LLM)
-                      │
-                      ▼
-          Execution Plan (JSON)
-                      │
-                      ▼
-          Data Executor (Pandas)
-                      │
-                      ▼
-        Business Analyst (LLM)
-                      │
-                      ▼
-       Visualization Planner
-                      │
-                      ▼
-            Automatic Chart
-```
+<img width="1693" height="929" alt="38c6137c-b929-4d77-8773-99a507570992" src="https://github.com/user-attachments/assets/6f970390-dc8d-4e16-8d5d-7bdcac524485" />
+
 
 ---
 
