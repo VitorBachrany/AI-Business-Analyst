@@ -145,30 +145,10 @@ python main.py
 
 ---
 
-## Installation
-
-Clone the repository
-
-git clone https://github.com/yourusername/AI-Business-Analyst.git
-
-Install the dependencies
-
-pip install -r requirements.txt
-
-Create a .env file
-
-GROQ_API_KEY=your_api_key
-
-Run the application
-
-streamlit run app.py
-
----
-
 ## Author
 
 **Vitor Bachrany**
 
-Information Engineering Student
+UFABC Information Engineering Student
 
 Artificial Intelligence • Business Intelligence • Data Engineering
