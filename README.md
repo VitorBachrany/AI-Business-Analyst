@@ -1,35 +1,11 @@
 # AI Business Analyst
 
-Enterprise AI Business Analyst capable of analyzing spreadsheets, generating executive insights and creating automatic visualizations using Large Language Models (LLMs).
-
-
-
-https://github.com/user-attachments/assets/aef019d1-5a6e-4ca1-a97d-9d0c74a4c41d
-
----
-## Screenshots
-Prompt used: Based on the business results, identify the areas that should receive the highest investment next year.
-
-
-## Dashboard
-<img width="1904" height="923" alt="image" src="https://github.com/user-attachments/assets/9edd1135-1f59-4864-abaf-67f811e78bb5" />
-<img width="1916" height="919" alt="image" src="https://github.com/user-attachments/assets/48e0cecd-24cc-4c26-b237-05e9f552efe4" />
-
-## Business Analysis
-<img width="1096" height="872" alt="image" src="https://github.com/user-attachments/assets/0d5fd75e-0de9-4f56-bb77-3e0c01369d97" />
-
-## Vizualization
-<img width="2129" height="738" alt="b8f3aac1-3ff1-46c8-8f9b-665f31f35df7" src="https://github.com/user-attachments/assets/5c5a6d49-3fb8-4c8b-a916-8801febe2d2f" />
-
-
-
-
-
-
-
+AI Business Analyst is an AI-powered Business Intelligence platform designed to transform spreadsheets into actionable business insights. By combining Large Language Models (LLMs), structured data analysis, and automatic visualization generation, the system allows users to explore datasets using natural language, produce executive reports, identify trends and KPIs, and support data-driven decision making through an intuitive Streamlit interface and a modular Python architecture.
 
 
 ---
+
+
 ## Features
 
 - Spreadsheet Analysis (CSV / Excel)
@@ -44,25 +20,16 @@ Prompt used: Based on the business results, identify the areas that should recei
 
 ---
 
-## Tech Stack
-
-- Python
-- LangChain
-- Groq
-- Pandas
-- NumPy
-- Matplotlib
-- Streamlit
-- OpenPyXL
-
----
-
 ## Architecture
 
 <img width="1693" height="929" alt="38c6137c-b929-4d77-8773-99a507570992" src="https://github.com/user-attachments/assets/6f970390-dc8d-4e16-8d5d-7bdcac524485" />
 
+---
+
+
 
 ---
+
 
 ## Project Structure
 
@@ -86,8 +53,39 @@ AI-Business-Analyst/
 ├── charts/
 └── README.md
 ```
+https://github.com/user-attachments/assets/aef019d1-5a6e-4ca1-a97d-9d0c74a4c41d
+---
+
+
+## Screenshots
+Prompt used: Based on the business results, identify the areas that should receive the highest investment next year.
+
+
+## Dashboard
+<img width="1904" height="923" alt="image" src="https://github.com/user-attachments/assets/9edd1135-1f59-4864-abaf-67f811e78bb5" />
+<img width="1916" height="919" alt="image" src="https://github.com/user-attachments/assets/48e0cecd-24cc-4c26-b237-05e9f552efe4" />
+
+## Business Analysis
+<img width="1096" height="872" alt="image" src="https://github.com/user-attachments/assets/0d5fd75e-0de9-4f56-bb77-3e0c01369d97" />
+
+## Vizualization
+<img width="2129" height="738" alt="b8f3aac1-3ff1-46c8-8f9b-665f31f35df7" src="https://github.com/user-attachments/assets/5c5a6d49-3fb8-4c8b-a916-8801febe2d2f" />
+
 
 ---
+
+## Tech Stack
+
+- Python
+- LangChain
+- Groq
+- Pandas
+- NumPy
+- Matplotlib
+- Streamlit
+- OpenPyXL
+
+
 
 ## Example Questions
 
