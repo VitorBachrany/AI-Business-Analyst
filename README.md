@@ -52,25 +52,15 @@ AI-Business-Analyst/
 ├── documents/
 ├── charts/
 └── README.md
+
+
+
 ```
 https://github.com/user-attachments/assets/aef019d1-5a6e-4ca1-a97d-9d0c74a4c41d
 ---
 
-
-## Screenshots
-Prompt used: Based on the business results, identify the areas that should receive the highest investment next year.
-
-
-## Dashboard
-<img width="1904" height="923" alt="image" src="https://github.com/user-attachments/assets/9edd1135-1f59-4864-abaf-67f811e78bb5" />
-<img width="1916" height="919" alt="image" src="https://github.com/user-attachments/assets/48e0cecd-24cc-4c26-b237-05e9f552efe4" />
-
-## Business Analysis
-<img width="1096" height="872" alt="image" src="https://github.com/user-attachments/assets/0d5fd75e-0de9-4f56-bb77-3e0c01369d97" />
-
 ## Vizualization
 <img width="2129" height="738" alt="b8f3aac1-3ff1-46c8-8f9b-665f31f35df7" src="https://github.com/user-attachments/assets/5c5a6d49-3fb8-4c8b-a916-8801febe2d2f" />
-
 
 ---
 
@@ -85,7 +75,7 @@ Prompt used: Based on the business results, identify the areas that should recei
 - Streamlit
 - OpenPyXL
 
-
+---
 
 ## Example Questions
 
