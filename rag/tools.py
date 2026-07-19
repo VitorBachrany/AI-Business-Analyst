@@ -6,9 +6,9 @@ from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_community.tools import WikipediaQueryRun
 from langchain_community.utilities import WikipediaAPIWrapper
 
-from spreadsheet_agent import analyze_spreadsheet
-from rag import ask_rag
-from dataset_manager import get_dataset
+from agents.spreadsheet_agent import analyze_spreadsheet
+from rag.rag import ask_rag
+from data.dataset_manager import get_dataset
 
 # ==========================================================
 # Save Tool
