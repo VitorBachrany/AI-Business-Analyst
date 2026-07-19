@@ -35,23 +35,41 @@ AI Business Analyst is an AI-powered Business Intelligence platform designed to 
 
 ```
 AI-Business-Analyst/
-
+│
 ├── app.py
 ├── main.py
-├── planner.py
-├── executor.py
-├── spreadsheet_agent.py
-├── business_analyst.py
-├── visualization.py
-├── visualization_planner.py
-├── dataset_manager.py
-├── rag.py
 ├── config.py
+├── requirements.txt
+├── README.md
+│
+├── agents/
+│   ├── spreadsheet_agent.py
+│   ├── business_analyst.py
+│   └── planner.py
+│
+├── data/
+│   ├── data_analysis.py
+│   ├── dataset_manager.py
+│   ├── executor.py
+│   └── vector_store.py
+│
+├── visualization/
+│   ├── visualization.py
+│   └── visualization_planner.py
+│
+├── rag/
+│   ├── rag.py
+│   └── tools.py
 │
 ├── datasets/
+│
 ├── documents/
+│
 ├── charts/
-└── README.md
+│
+├── database/
+│   ├── sales.csv
+
 
 
 
