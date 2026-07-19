@@ -1,8 +1,8 @@
-from planner import plan_analysis
-from executor import execute_plan
+from agents.planner import plan_analysis
+from data.executor import execute_plan
 from business_analyst import analyze_result
-from visualization import generate_chart
-from data_analysis import dataframe_schema
+from visualization.visualization import generate_chart
+from data.data_analysis import dataframe_schema
 
 import pandas as pd
 
