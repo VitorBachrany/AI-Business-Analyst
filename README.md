@@ -56,7 +56,11 @@ AI-Business-Analyst/
 
 
 ```
-https://github.com/user-attachments/assets/aef019d1-5a6e-4ca1-a97d-9d0c74a4c41d
+
+
+https://github.com/user-attachments/assets/ab1b3832-38c8-490f-9bf8-083d5e95e8c3
+
+
 ---
 
 ## Vizualization
