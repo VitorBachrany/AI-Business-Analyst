@@ -20,10 +20,14 @@ def execute_plan(df: pd.DataFrame, plan: dict):
 
 def execute_groupby(df, plan):
 
-    group_by = plan["group_by"].strip()
+    group_by = plan["group_by"]
     metric = plan["metric"]
     aggregation = plan["aggregation"]
-    question = plan.get("question", "").lower()
+
+    granularity = plan.get(
+        "time_granularity",
+        "none"
+    )
 
     df = df.copy()
 
@@ -38,8 +42,7 @@ def execute_groupby(df, plan):
 
         df["Date"] = pd.to_datetime(df["Date"])
 
-        # Monthly
-        if "monthly" in question:
+        if granularity == "month":
 
             df["Month"] = (
                 df["Date"]
@@ -49,14 +52,19 @@ def execute_groupby(df, plan):
 
             group_by = "Month"
 
-        # Yearly
-        elif "yearly" in question:
+        elif granularity == "year":
 
-            df["Year"] = df["Date"].dt.year
+            df["Year"] = (
+                df["Date"]
+                .dt.year
+            )
 
             group_by = "Year"
 
-        # Daily
+        elif granularity == "day":
+
+            group_by = "Date"
+
         else:
 
             group_by = "Date"
@@ -64,13 +72,6 @@ def execute_groupby(df, plan):
     # ======================================================
     # MULTIPLE COLUMNS
     # ======================================================
-
-    if isinstance(group_by, str) and "," in group_by:
-
-        group_by = [
-            column.strip()
-            for column in group_by.split(",")
-        ]
 
     grouped = df.groupby(group_by)[metric]
 
@@ -108,7 +109,10 @@ def execute_groupby(df, plan):
     # SORT
     # ======================================================
 
-    ascending = plan.get("ascending", True)
+    ascending = plan.get(
+        "ascending",
+        True
+    )
 
     result = result.sort_index(
         ascending=ascending
@@ -125,10 +129,6 @@ def execute_groupby(df, plan):
         result["Month Label"] = (
             result["Month"]
             .dt.strftime("%b %Y")
-        )
-
-        result = result.drop(
-            columns=["Month"]
         )
 
         result = result[
@@ -170,9 +170,9 @@ if __name__ == "__main__":
 
         "aggregation": "sum",
 
-        "ascending": True,
+        "time_granularity": "month",
 
-        "question": "Show the monthly revenue trend over time"
+        "ascending": True
 
     }
 
