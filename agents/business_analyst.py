@@ -1,4 +1,5 @@
 from langchain_groq import ChatGroq
+import re
 
 from config import (
     LLM_MODEL,
@@ -15,6 +16,23 @@ llm = ChatGroq(
 )
 
 # ==========================================================
+# CLEANER
+# ==========================================================
+
+
+def clean_response(text: str) -> str:
+
+    # Remove marcações Markdown inválidas
+    text = re.sub(r"\*+", "", text)
+
+    # Remove linhas em branco excessivas
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
+    # Remove espaços duplicados
+    text = re.sub(r" {2,}", " ", text)
+
+    return text
+# ==========================================================
 # BUSINESS ANALYST
 # ==========================================================
 
@@ -25,88 +43,9 @@ You are a Senior Business Intelligence Consultant.
 
 Your mission is to transform business data into strategic insights for executives.
 
-====================================================================
-SCOPE
-====================================================================
+The user's question has already been validated as a legitimate Business Intelligence request related to the uploaded dataset.
 
-You are NOT a general-purpose chatbot.
-
-Your ONLY responsibility is to analyze the uploaded business dataset.
-
-====================================================================
-FIRST TASK
-====================================================================
-
-Before analyzing the execution result, determine whether the user's request can reasonably be answered using the uploaded dataset.
-
-Treat the request as VALID whenever the user is asking for:
-
-- business analysis
-- executive summaries
-- business insights
-- trends
-- comparisons
-- KPIs
-- recommendations
-- opportunities
-- risks
-- forecasts based on the available data
-- investment suggestions based on the data
-- charts or visualizations
-- statistics
-- performance evaluation
-- strategic decisions
-- anything that requires interpreting the uploaded spreadsheet
-
-The user does NOT need to explicitly mention the spreadsheet.
-
-Broad strategic questions are also considered VALID.
-
-Examples of VALID questions:
-
-- Analyze my business performance.
-- Summarize this dataset.
-- Give me strategic recommendations.
-- What should I improve?
-- Which product performs best?
-- Compare revenue by region.
-- Show the monthly revenue trend.
-- Where should I invest next year based on this data?
-- What are the biggest business risks?
-- What opportunities do you identify?
-- Generate an executive report.
-
-Treat the request as INVALID only if it is clearly unrelated to the uploaded dataset.
-
-Examples of INVALID questions:
-
-- greetings only
-- random characters
-- meaningless text
-- programming questions
-- general knowledge
-- weather
-- politics
-- mathematics
-- requests unrelated to the uploaded business data
-
-If the user's request is meaningless, random text, or cannot reasonably be interpreted, DO NOT attempt to guess the user's intent.
-
-Instead, reply EXACTLY with:
-
-I'm designed to answer Business Intelligence questions about the uploaded dataset. Please ask a question related to your spreadsheet.
-
-Do NOT generate an analysis.
-
-Do NOT generate an executive summary.
-
-Do NOT analyze the execution result.
-
-Stop immediately.
-
-====================================================================
-GENERAL RULES
-====================================================================
+Your responsibility is to interpret the execution result and provide executive-level insights.
 
 Use ONLY the provided execution result.
 
@@ -114,19 +53,10 @@ Never invent numbers.
 
 Never fabricate information.
 
-Never speculate beyond the available data.
-
 If information is unavailable, explicitly state what data is missing.
 
-Keep recommendations directly connected to the available data.
+Focus on actionable business insights rather than merely describing the data..
 
-Do not simply describe the data.
-
-Interpret why the results matter from a business perspective.
-
-Prioritize actionable insights over descriptive statistics.
-
-If the user explicitly asks for recommendations or strategic insights, provide a deeper executive analysis.
 
 ====================================================================
 WRITING STYLE
@@ -143,6 +73,16 @@ Use bullet points whenever appropriate.
 Avoid repetition.
 
 Focus on decision making rather than describing the data.
+
+Formatting Rules
+
+Formatting Rules
+
+- Return clean Markdown only.
+- Use headings and bullet lists.
+- Do not use italic text.
+- Never print the response with "**" caracter
+- Always close Markdown formatting symbols properly.
 
 ====================================================================
 ANALYSIS GUIDELINES
@@ -177,13 +117,15 @@ RESPONSE FORMAT
 
 # Executive Summary
 
-Provide a concise answer to the user's question.
+The company generated **$2.37M** during the first four months of 2026.
 
 --------------------------------------------------
 
 # Key Findings
 
-Summarize the most important observations supported by the data.
+- Revenue peaked in April 2026 ($681.6K).
+- February recorded the lowest revenue ($493.8K).
+- The difference between the highest and lowest months was approximately 31%
 
 --------------------------------------------------
 
@@ -213,31 +155,12 @@ List the missing information that would allow a deeper analysis.
 
 """
 
+
     response = llm.invoke(prompt)
 
-    return response.content
+    analysis = clean_response(response.content)
 
 
-import pandas as pd
 
-if __name__ == "__main__":
+    return analysis
 
-    result = pd.DataFrame({
-
-        "Product": ["Notebook"],
-
-        "Revenue": [391092.54]
-
-    })
-
-    print(
-
-        analyze_result(
-
-            "Which product generated the highest revenue?",
-
-            result
-
-        )
-
-    )
