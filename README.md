@@ -45,7 +45,8 @@ AI-Business-Analyst/
 ├── agents/
 │   ├── spreadsheet_agent.py
 │   ├── business_analyst.py
-│   └── planner.py
+│   ├── planner.py
+│   └── question_validator.py
 │
 ├── data/
 │   ├── data_analysis.py
