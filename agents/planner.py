@@ -31,13 +31,28 @@ The JSON MUST follow exactly this structure.
 
 {{
     "operation": "groupby | filter | sort | describe | correlation",
-    "group_by": "string OR array of strings",
+    "group_by": "string for a single column OR array of strings for multiple columns",
     "metric": "string",
     "aggregation": "sum | mean | count | max | min",
+    "time_granularity": "day | month | year | none",
     "filters": [],
     "sort_by": "",
-    "ascending": true (boolean)
+    "ascending": true
 }}
+
+MULTIPLE GROUPING RULE
+
+If more than one column is required, ALWAYS return an array.
+
+Correct:
+
+"group_by":["Region","Product"]
+
+Incorrect:
+
+"group_by":"Region, Product"
+
+----------------------------------
 Examples:
 
 Example 1
@@ -67,7 +82,8 @@ Output:
     "operation":"groupby",
     "group_by":["Date","Product"],
     "metric":"Revenue",
-    "aggregation":"sum"
+    "aggregation":"sum",
+    "time_regularity":"month"
 }}
 
 ------------------------------------
@@ -76,6 +92,7 @@ Example 3
 
 Question:
 Average profit by category and region.
+------------------------------------
 
 Output:
 
@@ -83,8 +100,25 @@ Output:
     "operation":"groupby",
     "group_by":["Category","Region"],
     "metric":"Profit",
-    "aggregation":"mean"
+    "aggregation":"mean",
+    "time_regularity":"none"
 }}
+----------------------------------
+
+Example 4
+Question:
+Show the yearly profit trend.
+-----------------------------------
+Output:
+
+{{
+    "operation":"groupby",
+    "group_by":"Date",
+    "metric":"Profit",
+    "aggregation":"sum",
+    "time_granularity":"year"
+}}
+-----------------------------
 
 Rules:
 
@@ -93,11 +127,49 @@ Rules:
 - Do not explain anything.
 - Do not answer the user's question.
 
-Time Series Rules:
+Time Series Rules
 
-- If the user requests a monthly analysis and a Date column exists, use Date as the group_by field. The execution layer will aggregate by month.
-- If the user requests a yearly analysis and a Date column exists, use Date as the group_by field. The execution layer will aggregate by year.
-- If the user requests a daily analysis, group by Date.
+If a Date column exists:
+
+- Detect whether the user wants daily, monthly or yearly aggregation.
+
+Examples that indicate MONTH:
+
+- monthly
+- month
+- by month
+- month over month
+- monthly trend
+- monthly revenue
+- monthly sales
+
+Return:
+
+"time_granularity":"month"
+
+Examples that indicate YEAR:
+
+- yearly
+- annual
+- by year
+
+Return:
+
+"time_granularity":"year"
+
+Examples that indicate DAY:
+
+- daily
+- by day
+- each day
+
+Return:
+
+"time_granularity":"day"
+
+If no temporal aggregation is requested:
+
+"time_granularity":"none"
 
 Dataset schema:
 
